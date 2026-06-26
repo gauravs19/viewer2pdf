@@ -6,12 +6,46 @@
   "bin": {
     "viewer2pdf": "src/cli.mjs"
   },
+  "files": [
+    "src/",
+    "configs/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "capture": "node src/cli.mjs",
-    "postinstall": "echo \"Run 'npx playwright install chromium' once to download the browser binary.\""
+    "browser": "playwright-core install chromium",
+    "postinstall": "node -e \"console.log('\\n[viewer2pdf] One-time browser setup: npx playwright install chromium\\n')\""
   },
-  "keywords": ["pdf", "scraper", "canvas", "playwright", "document", "viewer", "capture"],
+  "keywords": [
+    "pdf",
+    "canvas",
+    "playwright",
+    "document",
+    "viewer",
+    "capture",
+    "scraper",
+    "download",
+    "print",
+    "screenshot",
+    "cli"
+  ],
+  "author": "Gaurav Sharma (https://github.com/gauravs19)",
   "license": "MIT",
+  "homepage": "https://github.com/gauravs19/viewer2pdf#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gauravs19/viewer2pdf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gauravs19/viewer2pdf/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "pdf-lib": "^1.17.1",
     "playwright-core": "^1.60.0"
