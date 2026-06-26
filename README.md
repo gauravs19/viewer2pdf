@@ -1,6 +1,16 @@
 # viewer2pdf
 
+[![npm version](https://img.shields.io/npm/v/viewer2pdf.svg)](https://www.npmjs.com/package/viewer2pdf)
+[![license](https://img.shields.io/npm/l/viewer2pdf.svg)](./LICENSE)
+[![node](https://img.shields.io/node/v/viewer2pdf.svg)](https://nodejs.org)
+
 Save documents from **canvas/image-based web viewers that block downloading and printing** into a clean, multi-page **PDF**.
+
+```bash
+npx viewer2pdf --url "https://portal.example.com/mydoc" --out MyDoc.pdf
+```
+
+> _Demo:_ add a short screen recording here (`docs/demo.gif`) — a document that "can't be downloaded" becoming a PDF in a few seconds is the whole pitch.
 
 Some portals (job sites, HR systems, banking, govt) show your documents in a custom viewer that renders each page to a `<canvas>` or `<img>` and disables right-click / download / print. `viewer2pdf` launches a real browser, lets you log in, then walks the viewer page-by-page, grabs each rendered page at full resolution, and assembles a PDF.
 
