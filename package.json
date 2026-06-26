@@ -1,0 +1,19 @@
+{
+  "name": "viewer2pdf",
+  "version": "1.0.0",
+  "description": "Capture canvas/image-based document viewers (that block download/print) into a PDF. Launches a real browser, you log in, it walks the pages and assembles a PDF.",
+  "type": "module",
+  "bin": {
+    "viewer2pdf": "src/cli.mjs"
+  },
+  "scripts": {
+    "capture": "node src/cli.mjs",
+    "postinstall": "echo \"Run 'npx playwright install chromium' once to download the browser binary.\""
+  },
+  "keywords": ["pdf", "scraper", "canvas", "playwright", "document", "viewer", "capture"],
+  "license": "MIT",
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "playwright-core": "^1.60.0"
+  }
+}

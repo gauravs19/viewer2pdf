@@ -1,0 +1,31 @@
+{
+  "_comment": "Reference config. Top-level 'defaults' apply to every site; each entry under 'sites' inherits 'defaults' then overrides. Select with: --config configs/default.json --site <name>. Any field here is also settable via CLI flags.",
+  "defaults": {
+    "captureMode": "auto",
+    "navMethod": "button",
+    "nextLabels": ["Next", "Next Page", "›", ">", "→", "chevron_right"],
+    "prevLabels": ["Prev", "Previous", "‹", "<", "←", "chevron_left"],
+    "rewindFirst": true,
+    "maxPages": 200,
+    "blankMin": 0.012,
+    "blankMax": 0.999,
+    "pollMs": 250,
+    "maxPollsPerPage": 80,
+    "settleMsAfterNav": 250
+  },
+  "sites": {
+    "generic-pdfjs": {
+      "_comment": "Typical PDF.js style viewer that renders pages to <canvas> and uses arrow keys.",
+      "captureMode": "canvas",
+      "navMethod": "key",
+      "nextKey": "ArrowRight",
+      "prevKey": "ArrowLeft"
+    },
+    "image-slider": {
+      "_comment": "Viewer that swaps a big <img> per page with Next/Prev buttons.",
+      "captureMode": "img",
+      "nextLabels": ["Next", "›", ">"],
+      "prevLabels": ["Prev", "‹", "<"]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "_comment": "Worked example for a typical canvas-based viewer that renders one page per <canvas>, navigated by 'Prev'/'Next' buttons, with a 'Page X of Y' indicator. The viewer can show a transient black frame mid-render, so blankMax stays below 1.0 to skip unrendered frames. When a portal exposes several documents in a picker, open each one and use --multi to name and capture them in turn.",
+  "defaults": {
+    "captureMode": "canvas",
+    "navMethod": "button",
+    "nextLabels": ["Next"],
+    "prevLabels": ["Prev"],
+    "rewindFirst": true,
+    "blankMin": 0.012,
+    "blankMax": 0.999,
+    "maxPages": 60,
+    "settleMsAfterNav": 300
+  },
+  "sites": {
+    "my-portal": {
+      "url": "https://portal.example.com/documents"
+    }
+  }
+}
